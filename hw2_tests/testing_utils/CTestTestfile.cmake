@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /work/csci104/material/artifacts/hw2/grading/amazon/testing_utils
-# Build directory: /work/csci104/material/artifacts/hw2/grading/amazon/testing_utils
+# Source directory: /home/codio/workspace/FINALHW2/hw2_tests/testing_utils
+# Build directory: /home/codio/workspace/FINALHW2/hw2_tests/testing_utils
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

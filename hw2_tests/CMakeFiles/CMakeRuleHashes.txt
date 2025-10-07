@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+bb0dc0a4086c280b30f732aabcf50c45 /home/codio/workspace/FINALHW2/amazon
+40ac9d2f364b1bfcb51fd006123c5b32 CMakeFiles/check
+67db66316e8dbe6ef7489694334ba5ed amazon_tests/CMakeFiles/run_make_amazon

@@ -19,11 +19,12 @@ public:
     void addToCart(const std::string& username, Product* product);
     void viewCart(const std::string& username);
     void buyCart(const std::string& username);
+    const std::vector<User*>& getUsers() const;
 
 private:
     std::vector<Product*> products_;
     std::vector<User*> users_;
-    std::map<std::string, std::vector<Product*> > carts;
+    std::map<std::string, std::vector<Product*> > carts;    
 };
 
 #endif

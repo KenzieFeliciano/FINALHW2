@@ -12,9 +12,9 @@ Menu:
 
 Enter command: 
 Hit   1
-00001010 00001111         
+00001010 00001111
 Author: A. Robot ISBN: 111-000000000-1
-0.11   5 left.
+0.11 5 left.
 
 
 Enter command: 
@@ -23,16 +23,14 @@ Enter command:
 
 Enter command: 
 Item 1
-00001010 00001111         
+00001010 00001111
 Author: A. Robot ISBN: 111-000000000-1
-0.11   5 left.
-
+0.11 5 left.
 
 Enter command: 
 Item 1
-00001010 00001111         
+00001010 00001111
 Author: A. Robot ISBN: 111-000000000-1
-0.11   5 left.
-
+0.11 5 left.
 
 Enter command: 

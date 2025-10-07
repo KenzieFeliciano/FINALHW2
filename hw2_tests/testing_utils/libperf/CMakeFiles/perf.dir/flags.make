@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=c99
 
 C_DEFINES = -D_DEFAULT_SOURCE
 
-C_INCLUDES = -I/work/csci104/material/artifacts/hw2/grading/amazon/testing_utils/libperf/. 
+C_INCLUDES = -I/home/codio/workspace/FINALHW2/hw2_tests/testing_utils/libperf/. 
 

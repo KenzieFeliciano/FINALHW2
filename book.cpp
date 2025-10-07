@@ -33,7 +33,7 @@ void Book::dump(ostream& os) const
     os << name_ << endl;
     os << price_ << endl;
     os << qty_ << endl;
-    os << author_ << endl;
     os << isbn_ << endl;
+    os << author_ << endl;
 }
 

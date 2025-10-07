@@ -106,31 +106,66 @@ int main(int argc, char* argv[])
                 string username;
                 int hitNo;
                 if(ss >> username >> hitNo) {
-                    if(hitNo >= 1 && hitNo <= (int)hits.size()) {
-                        ds.addToCart(username, hits[hitNo-1]);
+                    string canonicalUser;
+                    bool userFound = false;
+                    for(size_t i = 0; i < ds.getUsers().size(); ++i){
+                        if(convToLower(ds.getUsers()[i]->getName()) == convToLower(username)) {
+                            canonicalUser = ds.getUsers()[i]->getName();
+                            userFound = true;
+                            break;
+                        }
+                    }
+                    if(!userFound || hitNo < 1 || hitNo > (int)hits.size()) {
+                        cout << "Invalid request" << endl;
                     } else {
-                        cout << "Invalid hit number" << endl;
+                        ds.addToCart(canonicalUser, hits[hitNo-1]);
                     }
                 } else {
-                    cout << "ADD username search_hit_number" << endl;
+                    cout << "Invalid request" << endl;
                 }
             }
             else if (cmd == "VIEWCART") {
                 string username;
                 if(ss >> username) {
-                    ds.viewCart(username);
+                    string canonicalUser;
+                    bool userFound = false;
+                    for(size_t i = 0; i < ds.getUsers().size(); ++i){
+                        if(convToLower(ds.getUsers()[i]->getName()) == convToLower(username)) {
+                            canonicalUser = ds.getUsers()[i]->getName();
+                            userFound = true;
+                            break;
+                        }
+                    }
+                    if(!userFound) {
+                        cout << "Invalid username" << endl;
+                    } else {
+                        ds.viewCart(canonicalUser);
+                    }
                 } else {
                     cout << "VIEWCART username" << endl;
                 }
             }
             else if (cmd == "BUYCART") {
-                string username;
-                if(ss >> username) {
-                    ds.buyCart(username);
-                } else {
-                    cout << "BUYCART username" << endl;
+            string username;
+            if(ss >> username) {
+                string canonicalUser;
+                bool userFound = false;
+                for(size_t i = 0; i < ds.getUsers().size(); ++i){
+                    if(convToLower(ds.getUsers()[i]->getName()) == convToLower(username)) {
+                        canonicalUser = ds.getUsers()[i]->getName();
+                        userFound = true;
+                        break;
+                    }
                 }
+                if(!userFound) {
+                    cout << "Invalid username" << endl;
+                } else {
+                    ds.buyCart(canonicalUser);
+                }
+            } else {
+                cout << "BUYCART username" << endl;
             }
+          }
 
 
 

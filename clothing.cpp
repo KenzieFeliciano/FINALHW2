@@ -22,7 +22,7 @@ string Clothing::displayString() const
 {
     ostringstream oss;
     oss << name_ << endl;
-    oss << "Brand: " << brand_ << " Size: " << size_ << endl;
+    oss << "Size: " << size_ << " Brand: " << brand_ << endl;
     oss << price_ << " " << qty_ << " left.";
     return oss.str();
 }
@@ -33,6 +33,6 @@ void Clothing::dump(ostream& os) const
     os << name_ << endl;
     os << price_ << endl;
     os << qty_ << endl;
-    os << brand_ << endl;
     os << size_ << endl;
+    os << brand_ << endl;
 }
